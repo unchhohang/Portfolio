@@ -1,95 +1,54 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Me from "@/components/Me";
+import AboutMe from "@/components/aboutMe";
+import SkillBoard from "@/components/SkillBoard";
+import Contact from "@/components/Contact";
+import Nav from "@/components/Nav";
+import { ThemeProvider } from "next-themes";
+import HamburgerNav from "@/components/HamburgerNav";
+import DarkToggle from "@/components/DarkToggle";
+import { CiMobile3 } from "react-icons/ci";
+import ToMobileViewBtn from "@/components/ToMobileViewBtn";
+import { useState } from "react";
 
 export default function Home() {
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <main className=" mx-1 my-2 sm:my-7 sm:mx-16 ">
+      <ThemeProvider attribute="class">
+        {" "}
+        {/* For Dark and light themes */}
+        <header className="flex  justify-between    ">
+          <span className="text-lg sm:text-4xl m-3">Unchhohang</span>
+          <div className="hidden sm:block">
+            <Nav />
+          </div>
+          <div className="sm:hidden flex items-center gap-3">
+            <DarkToggle />
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+            <HamburgerNav />
+          </div>
+        </header>
+        <section id="Me" className="my-7 ">
+          <Me />
+        </section>
+        <section id="AboutMe" className="my-28 ">
+          <AboutMe />
+        </section>
+        <section id="SkillBoard" className="my-28 ">
+          <SkillBoard />
+        </section>
+        {/* Projects section TODO  */}
+        {/* <div></div> */}
+        <section id="Contact" className="my-10 ">
+          <Contact />
+        </section>
+        <footer className="hidden sm:flex justify-center ">
+          <Nav />
+        </footer>{" "}
+        <ToMobileViewBtn />
+      </ThemeProvider>
     </main>
   );
 }

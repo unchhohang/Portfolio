@@ -1,8 +1,20 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+// These styles apply to every route in the application
 import "./globals.css";
+import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
+import { Poppins, Inconsolata } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  weight: "400",
+  variable: "--body-poppins",
+  subsets: ["latin"],
+});
+
+const inconsolata = Inconsolata({
+  weight: "400",
+  variable: "--body-inconsolata",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +27,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className="scroll-smooth">
+      <head>
+        {/* <meta name="viewport" content="width=device-width, initial-scale=1.0" /> */}
+      </head>
+      <body className={`${poppins.variable} ${inconsolata.variable} overscroll-x-none`}>
+        {children}
+      </body>
     </html>
   );
 }
