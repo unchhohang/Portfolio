@@ -76,23 +76,27 @@ export default function Me() {
             </a>
           </div>
           <div className="flex justify-center space-x-2">
-            <button type="button" className="rounded ">
-              <Image
-                className="rounded-full"
-                src={"/linkedin.svg"}
-                alt="linkedin svg"
-                width={24}
-                height={24}
-              />
-            </button>
-            <button type="button" className="rounded ">
-              <Image
-                src={"/github.svg"}
-                alt="github svg"
-                width={30}
-                height={30}
-              />
-            </button>
+            <a href="https://linkedin.com/in/unchhohang-limbu-u4">
+              <button type="button" className="rounded ">
+                <Image
+                  className="rounded-full"
+                  src={"/linkedin.svg"}
+                  alt="linkedin svg"
+                  width={24}
+                  height={24}
+                />
+              </button>
+            </a>
+            <a href="https://github.com/unchhohang">
+              <button type="button" className="rounded ">
+                <Image
+                  src={"/github.svg"}
+                  alt="github svg"
+                  width={30}
+                  height={30}
+                />
+              </button>
+            </a>
           </div>
         </div>
       </div>
