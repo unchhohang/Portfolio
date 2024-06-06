@@ -27,7 +27,7 @@ export default function Me() {
         {theme == "dark" && (
           <Image
             className="rounded-full"
-            src={"/batman profile.jpg"}
+            src={"/static/batman profile.jpg"}
             alt="Batman Image credit Devian arts"
             width={400}
             height={400}
@@ -36,7 +36,7 @@ export default function Me() {
         {theme === "light" && (
           <Image
             className="rounded-full"
-            src={"/panda no bg.png"}
+            src={"/static/panda no bg.png"}
             alt="Happy panda image. Creadit to some chinese artist."
             width={400}
             height={400}
@@ -45,7 +45,7 @@ export default function Me() {
 
         {/* Details texts beside image */}
         <div className="flex flex-col justify-center items-center m-1">
-          <div className="m-2 font-medium text-[#ef4444]">`Hello, I&apos;m</div>
+          <div className="m-2 font-medium text-[#ef4444]">Hello, I&apos;m</div>
           <div className="m-2 font-semibold text-3xl">Unchhohang Limbu</div>
           <div className="m-2 font-medium text-[#57534e] text-xl">
             Full Stack Developer
