@@ -45,7 +45,7 @@ export default function Me() {
 
         {/* Details texts beside image */}
         <div className="flex flex-col justify-center items-center m-1">
-          <div className="m-2 font-medium text-[#ef4444]">Hello, I&aposm</div>
+          <div className="m-2 font-medium text-[#ef4444]">`Hello, I&apos;m</div>
           <div className="m-2 font-semibold text-3xl">Unchhohang Limbu</div>
           <div className="m-2 font-medium text-[#57534e] text-xl">
             Full Stack Developer
