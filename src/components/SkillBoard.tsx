@@ -4,7 +4,7 @@
 
 import { FaCheckCircle } from "react-icons/fa";
 
-export default function () {
+export default function SkillBoard() {
   const frontSkill = ["React", "HTML", "CSS", "Tailwind", "ChakraUI"];
 
   const backSkill = ["NodeJS", "ExpressJS", "SQL", "MongoDB"];
@@ -41,7 +41,7 @@ export default function () {
           </div>
           <div className="flex flex-col items-start sm:grid sm:grid-cols-2 sm:items-center">
             {frontSkill?.map((x, i) => (
-              <div className="flex items-center m-2 pl-10">
+              <div key={x} className="flex items-center m-2 pl-10">
                 <span className="m-3">
                   <FaCheckCircle />
                 </span>
@@ -66,7 +66,7 @@ export default function () {
           </div>
           <div className="flex flex-col items-start sm:grid sm:grid-cols-2 sm:items-center">
             {backSkill?.map((x, i) => (
-              <div className="flex items-center m-2 pl-10">
+              <div key={x} className="flex items-center m-2 pl-10">
                 <span className="m-3">
                   <FaCheckCircle />
                 </span>
@@ -90,7 +90,7 @@ export default function () {
           </div>
           <div className="flex flex-col   sm:flex-row sm:justify-around ">
             {languageSkill?.map((x, i) => (
-              <div className="flex items-center m-2 pl-10">
+              <div key={x} className="flex items-center m-2 pl-10">
                 <span className="m-3">
                   <FaCheckCircle />
                 </span>

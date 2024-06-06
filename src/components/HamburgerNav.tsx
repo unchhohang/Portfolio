@@ -4,7 +4,7 @@
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-export default function () {
+export default function HamburgerNav() {
   const [show, setShow] = useState(false);
 
   return (
@@ -18,6 +18,7 @@ export default function () {
                         right-3
                         p-1
                         bg-white
+                        dark:bg-black
       `}
       >
         <a href="#AboutMe" onClick={() => setShow(false)}>

@@ -7,20 +7,14 @@ import { useEffect, useState } from "react";
 import { CiDesktop, CiMobile3 } from "react-icons/ci";
 import { isMobile } from "react-device-detect";
 
-export default function () {
-    const [width, setWidth] = useState<number>(window.innerWidth);
+export default function ToMobileViewBtn() {
+  // const [width, setWidth] = useState<number>(window.innerWidth);
 
-    function handleWindowSizeChange() {
-      setWidth(window.innerWidth);
-    }
-    useEffect(() => {
-      window.addEventListener("resize", handleWindowSizeChange);
-      return () => {
-        window.removeEventListener("resize", handleWindowSizeChange);
-      };
-    }, []);
+  // function handleWindowSizeChange() {
+  //   setWidth(window.innerWidth);
+  // }
 
-    const isMobileViewInBrowser = width <= 425;
+  // const isMobileViewInBrowser = width <= 425;
 
   return (
     <button
@@ -32,7 +26,7 @@ export default function () {
         `
       }
     >
-      {isMobileViewInBrowser ? <CiDesktop /> : <CiMobile3 />}
+      {/* {isMobileViewInBrowser ? <CiDesktop /> : <CiMobile3 />} */}
     </button>
   );
 }

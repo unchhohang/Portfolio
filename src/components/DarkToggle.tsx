@@ -6,7 +6,7 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { IoMoon, IoSunny } from "react-icons/io5";
 
-export default function () {
+export default function DarkToggle () {
   const { systemTheme, theme, setTheme } = useTheme();
 
   const [mounted, setMounted] = useState(false);

@@ -8,7 +8,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FaMedal, FaUserGraduate } from "react-icons/fa6";
 
-export default function () {
+export default function AboutMe() {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
