@@ -32,7 +32,7 @@ export default function AboutMe() {
         {theme === "dark" && (
           <Image
             className="rounded-xl sm:m-4"
-            src={"/static/batman on top.jpg"}
+            src={"/static/batman-on-top.jpg"}
             alt={"Batman on top"}
             height={500}
             width={500}
@@ -41,7 +41,7 @@ export default function AboutMe() {
         {theme === "light" && (
           <Image
             className="rounded-xl m-4"
-            src={"/static/panda working no bg.png"}
+            src={"/static/panda-working-no-bg.png"}
             alt={"Panda taking apple. Some chinese artist doing"}
             height={500}
             width={500}
