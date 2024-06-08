@@ -10,6 +10,8 @@ export default function DarkToggle () {
   const { systemTheme, theme, setTheme } = useTheme();
 
   const [mounted, setMounted] = useState(false);
+  console.log('what is theme in production, ' , theme);
+  
 
   useEffect(() => {
     setMounted(true);
