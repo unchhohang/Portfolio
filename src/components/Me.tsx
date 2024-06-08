@@ -13,6 +13,8 @@ export default function Me() {
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
+  const currentTheme = theme === "system" ? systemTheme : theme;
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -24,7 +26,7 @@ export default function Me() {
   return (
     <div>
       <div className="flex flex-col sm:flex-row sm:justify-center">
-        {theme == "dark" && (
+        {currentTheme == "dark" && (
           <Image
             className="rounded-full"
             src={"/static/batman-profile.jpg"}
@@ -33,7 +35,7 @@ export default function Me() {
             height={400}
           />
         )}
-        {theme === "light" && (
+        {currentTheme === "light" && (
           <Image
             className="rounded-full"
             src={"/static/panda-no-bg.png"}
@@ -66,7 +68,7 @@ export default function Me() {
               <button
                 type="button"
                 className="p-2 
-                        font-medium
+                theme            font-medium
                         text-sm text-white
             rounded-3xl border-solid border-2 border-[#134e4a] m-2
             bg-[#134e4a]"

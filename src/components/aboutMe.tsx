@@ -9,8 +9,9 @@ import { useEffect, useState } from "react";
 import { FaMedal, FaUserGraduate } from "react-icons/fa6";
 
 export default function AboutMe() {
-  const { theme } = useTheme();
+  const { theme , systemTheme} = useTheme();
   const [mounted, setMounted] = useState(false);
+  const currentTheme = theme === "system" ? systemTheme : theme;
 
   useEffect(() => {
     setMounted(true);
@@ -29,7 +30,7 @@ export default function AboutMe() {
         <div className="m-2 font-semibold text-4xl">About Me</div>
       </div>
       <div className="grid items-center sm:grid-cols-2 ">
-        {theme === "dark" && (
+        {currentTheme === "dark" && (
           <Image
             className="rounded-xl sm:m-4"
             src={"/static/batman-on-top.jpg"}
@@ -38,7 +39,7 @@ export default function AboutMe() {
             width={500}
           />
         )}
-        {theme === "light" && (
+        {currentTheme === "light" && (
           <Image
             className="rounded-xl m-4"
             src={"/static/panda-working-no-bg.png"}
