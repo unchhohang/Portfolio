@@ -36,7 +36,7 @@ export default function Me() {
         {theme === "light" && (
           <Image
             className="rounded-full"
-            src={"/static/panda-no-bg.png"}
+            src={".vercel/output/static/panda-no-bg.png"}
             alt="Happy panda image. Creadit to some chinese artist."
             width={400}
             height={400}
